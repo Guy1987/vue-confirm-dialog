@@ -10,7 +10,11 @@
         <div v-if="isShow" ref="vueConfirmDialog" class="vc-container">
           <span class="vc-text-grid">
             <h4 v-if="dialog.title" class="vc-title" v-html="dialog.title"></h4>
-            <p v-if="dialog.message" class="vc-text" v-html="dialog.message"></p>
+            <p
+              v-if="dialog.message"
+              class="vc-text"
+              v-html="dialog.message"
+            ></p>
             <span v-if="dialog.auth">
               <input
                 v-focus
@@ -32,7 +36,6 @@
               v-if="dialog.button.no"
               @click.stop="e => handleClickButton(e, false)"
               class="vc-btn left"
-              type="button"
             >
               {{ dialog.button.no }}
             </button>
@@ -42,7 +45,6 @@
               :disabled="dialog.auth ? !password : false"
               @click.stop="e => handleClickButton(e, true)"
               class="vc-btn"
-              type="button"
             >
               {{ dialog.button.yes }}
             </button>
