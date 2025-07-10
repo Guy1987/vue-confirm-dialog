@@ -1,15 +1,16 @@
 {
   "name": "vue-confirm-dialog",
   "description": "simple action confirm",
-  "version": "1.0.2",
-  "author": "Onur Aslan <aslanon.tr@gmail.com>",
+  "version": "1.0.3",
+  "author": "Guy1987",
   "private": false,
   "main": "dist/index.js",
   "scripts": {
     "build:base": "cross-env NODE_ENV=production webpack --config webpack.config.js --progress --hide-modules",
     "build:ssr": "cross-env NODE_ENV=production webpack --config webpack.config.ssr.js --progress --hide-modules",
     "build": "npm run build:base && npm run build:ssr",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "prepare": "npm run build"
   },
   "peerDependencies": {
     "vue": "^2.6.10"
@@ -34,7 +35,7 @@
     "vue-template-compiler": "^2.6.10",
     "vue-loader": "^11.1.4",
     "css-loader": "^0.25.0",
-    "node-sass": "^4.11.0",
+    "sass": "^1.58.3",
     "sass-loader": "^5.0.1",
     "file-loader": "^0.9.0",
     "webpack": "^2.7.0",
